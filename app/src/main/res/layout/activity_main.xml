@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName|numberDecimal" />
 
     <TextView
         android:id="@+id/lblAltura"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName|numberDecimal" />
 
     <Button
         android:id="@+id/btnCalcular"
@@ -47,11 +47,35 @@
         android:onClick="calcularImc"
         android:text="Calcular IMC" />
 
-    <TextView
-        android:id="@+id/txtResultado"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:padding="10dp" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:textSize="24sp"
+            android:hint="IMC"
+            tools:text="placeholder" />
+
+        <TextView
+            android:id="@+id/txtCategoria"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:hint="Categoria"
+            tools:text="placeholder"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>
